@@ -1,10 +1,8 @@
 import React from "react";
 
 class TwitterMessage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: "", remainingChar: this.props.maxChars};
-  }
+  state = {value: "", remainingChar: this.props.maxChars}
+
 
   handleChange = e => {
     if (e.target.value.length < this.state.value.length) {
