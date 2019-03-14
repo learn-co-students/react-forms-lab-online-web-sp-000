@@ -8,6 +8,9 @@ class LoginForm extends React.Component {
   }
 
   handleInputChange = event => {
+    if (!event.value) {
+      return;
+    }
     this.setState({
       [event.target.name]: event.target.value
     })
