@@ -32,7 +32,7 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={e => this.handleSubmit(e)}>
+      <form onSubmit={(e) => this.handleSubmit(e)}>
         <div>
           <label>
             Username
@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
               name="username" 
               type="text" 
               value={this.state.username} 
-              onChange={e => this.handleUsernameChange(e)} 
+              onChange={(e) => this.handleUsernameChange(e)} 
             />
           </label>
         </div>
@@ -53,7 +53,7 @@ class LoginForm extends React.Component {
               name="password" 
               type="password" 
               value={this.state.password}
-              onChange={e => this.handlePasswordChange(e)}
+              onChange={(e) => this.handlePasswordChange(e)}
             />
           </label>
         </div>
