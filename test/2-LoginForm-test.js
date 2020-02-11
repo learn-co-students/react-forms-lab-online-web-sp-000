@@ -42,7 +42,7 @@ describe("<LoginForm />", () => {
   describe("Calling `handleLogin` callback prop", () => {
     it("should call the prevent the default action when the form is being submitted", () => {
       let spy = sinon.spy();
-      const wrapper = mount(<App />);
+      const wrapper = shallow(<LoginForm handleLogin={spy} />);
       wrapper.find("form").simulate("submit", { preventDefault: spy });
 
       expect(
