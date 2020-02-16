@@ -5,19 +5,11 @@ class TwitterMessage extends React.Component {
     super();
     this.state = {
       inputValue: ""
-    };
-    
-    
+    };   
   }
 
-<<<<<<< HEAD
-=======
-    this.state = {
-      inputValue: " "
-    };
-  }
+  
 
->>>>>>> origin
   handleInputChange = (e) =>{
     this.setState({
       inputValue: e.target.value
@@ -30,10 +22,7 @@ class TwitterMessage extends React.Component {
       <div>     
         <strong>Your message:</strong>
         <input type="text" name="message" id="message" onChange = {(e)=>this.handleInputChange(e)} value = {this.state.inputValue}/>
-<<<<<<< HEAD
         {number}
-=======
->>>>>>> origin
       </div>
     );
   }
