@@ -5,8 +5,8 @@ class LoginForm extends React.Component {
     super();
 
     this.state = {
-      username: "Joe",
-      password: "22"
+      username: "",
+      password: ""
     };
   }
 
@@ -18,8 +18,8 @@ class LoginForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    if (event.target.name && event.target.password) {
-      this.props.handleLogin(event)
+    if (this.state.username && this.state.password) {
+      this.props.handleLogin(this.state)
     }
   }
 
