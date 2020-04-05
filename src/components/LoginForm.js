@@ -10,16 +10,9 @@ class LoginForm extends React.Component {
     };
   }
 
-  updateUsername = event => {
+  updateForm = event => {
     this.setState({
-      username: event.target.value
-      
-    })
-  }
-
-  updatePassword = event => {
-    this.setState({
-      password: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
@@ -40,7 +33,7 @@ class LoginForm extends React.Component {
               id="username" 
               name="username"
               value={this.state.username}
-              onChange={this.updateUsername}
+              onChange={this.updateForm}
             />
           </label>
         </div>
@@ -51,7 +44,7 @@ class LoginForm extends React.Component {
               id="password"
               name="password"
               value={this.state.password}
-              onChange={this.updatePassword}
+              onChange={this.updateForm}
             />
           </label>
         </div>
