@@ -1,10 +1,17 @@
 import React from "react";
 
 class LoginForm extends React.Component {
-  constructor() {
-    super();
+  state = {
+    username: ""
+  };
+  
 
-    this.state = {};
+  handleLogin = event => {
+    event.preventDefault()
+    this.setState({
+      `${this.props.name}`: event.target.value
+    })
+    console.log(event)
   }
 
   render() {
@@ -13,13 +20,24 @@ class LoginForm extends React.Component {
         <div>
           <label>
             Username
-            <input id="username" name="username" type="text" />
+            <input
+            id="username"
+            name="username"
+            type="text"
+            value={this.state.username}
+            onChange={this.handleLoginUsername}
+            />
           </label>
         </div>
         <div>
           <label>
             Password
-            <input id="password" name="password" type="password" />
+            <input id="password"
+            name="password"
+            type="password"
+            value={this.state.password}
+            onChange={this.handleLoginPassword}
+            />
           </label>
         </div>
         <div>
