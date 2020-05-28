@@ -2,21 +2,29 @@ import React from "react";
 
 class LoginForm extends React.Component {
   state = {
-    username: ""
+    username: "",
+    password: ""
   };
-  
 
   handleLogin = event => {
-    event.preventDefault()
+    console.log(event.target.value, event.target.id)
     this.setState({
-      `${this.props.name}`: event.target.value
+      [event.target.id]: event.target.value
     })
-    console.log(event)
+    
+  }
+
+  handleSubmit = event => {
+    event.preventDefault()
+    if(this.state.username && this.state.password) {
+      return this.props.handleLogin(this.state)
+    }
+    console.log(this.state)
   }
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <div>
           <label>
             Username
@@ -25,18 +33,19 @@ class LoginForm extends React.Component {
             name="username"
             type="text"
             value={this.state.username}
-            onChange={this.handleLoginUsername}
+            onChange={this.handleLogin}
             />
           </label>
         </div>
         <div>
           <label>
             Password
-            <input id="password"
+            <input
+            id="password"
             name="password"
             type="password"
             value={this.state.password}
-            onChange={this.handleLoginPassword}
+            onChange={this.handleLogin}
             />
           </label>
         </div>
