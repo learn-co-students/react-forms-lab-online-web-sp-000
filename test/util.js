@@ -1,3 +1,7 @@
+global.navigator = {
+  userAgent: 'node.js'
+};
+
 module.exports = {
   isValueInState: (state, valueToCheck) => {
     for (let i = 0; i < Object.keys(state).length; i++) {
