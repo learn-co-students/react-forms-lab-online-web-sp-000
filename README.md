@@ -22,8 +22,6 @@ the tests run correctly.
 
 ## `TwitterMessage`
 
-![Tweet Tweet Tweet](https://media.giphy.com/media/f4eXhcyemnGwM/giphy.gif)
-
 1. Open the `components/TwitterMessage.js` file.
 
 2. This component takes one prop: `maxChars` which is a number — the maximum
