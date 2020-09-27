@@ -26,7 +26,7 @@ class LoginForm extends React.Component {
     e.preventDefault();
     let { username, password } = this.state
 
-    if (!(username.length === 0) & !(password.length === 0)) {
+    if (!(username.length === 0) && !(password.length === 0)) {
       this.props.handleLogin( { username, password } );
     }
   }
