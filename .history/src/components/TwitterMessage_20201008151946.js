@@ -1,12 +1,12 @@
 import React from "react";
 
 class TwitterMessage extends React.Component {
-  constructor(props) {
-    super(props);
-// console.log(props);
+  constructor() {
+    super();
+
     this.state = {
       message: '',
-      characters: props.maxChars
+      characters:''
     };
   }
 handleChange = e => {
@@ -23,7 +23,7 @@ handleChange = e => {
       <div>
         <strong>Your message:</strong>
         <input 
-        value={this.state.message}
+        value={this.state.change}
         onChange={e => this.handleChange(e)} 
         maxchars="280" 
         type="text" 

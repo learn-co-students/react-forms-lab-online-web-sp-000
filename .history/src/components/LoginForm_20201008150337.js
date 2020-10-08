@@ -4,34 +4,27 @@ class LoginForm extends React.Component {
   constructor() {
     super();
 
-    this.state = {
-      username: '',
-      password: ''
-    };
+    this.state = {};
   }
   handleInputChange = e => {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
+    let input = e.target.value
   }
 
   handleSubmit = e => {
-    e.preventDefault()
-    if(!this.state.username || !this.state.password) 
-    // console.log(e);
-    return
-    this.props.handleLogin(this.state)
+    // if(this.state.username && this.state.password) {
+      e.preventDefault()
+console.log(e);
+console.log('DONE');
     // }
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form>
         <div>
           <label>
             Username
-            <input 
-                   onChange={this.handleInputChange} 
+            <input onChange={this.handleInputChange} 
                    value={this.state.username}
                    id="username" 
                    name="username" 
@@ -41,12 +34,7 @@ class LoginForm extends React.Component {
         <div>
           <label>
             Password
-            <input 
-                onChange={this.handleInputChange} 
-                value={this.state.username}
-                id="password" 
-                name="password" 
-                type="password" />
+            <input onChange={console.log('hi') } id="password" name="password" type="password" />
           </label>
         </div>
         <div>
