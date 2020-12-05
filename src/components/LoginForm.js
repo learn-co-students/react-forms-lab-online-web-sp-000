@@ -7,9 +7,15 @@ class LoginForm extends React.Component {
     this.state = {};
   }
 
+  bbll = event => {
+    event.preventDefault();
+    console.log(event.target);
+
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={event => this.bbll(event)} >
         <div>
           <label>
             Username
