@@ -8,6 +8,7 @@ class App extends Component {
     console.log(`Logging in ${username} with password ${password}`);
   };
 
+
   render() {
     return (
       <div>
@@ -21,7 +22,6 @@ class App extends Component {
           <pre>TwitterMessage</pre>
         </h1>
         <TwitterMessage maxChars={280} />
-
 
 
       </div>
