@@ -11,10 +11,6 @@ class LoginForm extends React.Component {
     };
   }
 
-  handleLogin = () => {
-    console.log("Hello");
-  }
-
   handleInputChange = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -28,6 +24,8 @@ class LoginForm extends React.Component {
       password: this.state.password
     }
     let dataArray = this.state.submittedData.concat(formData)
+    if (!this.state.username || !this.state.password) return
+    this.props.handleLogin(this.state)
     this.setState({submittedData: dataArray})
   }
 
@@ -42,7 +40,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div>
-      <form onSubmit = {e => this.handleSubmit(e)}>
+      <form onSubmit = {this.handleSubmit}>
         <div>
           <label>
             Username
